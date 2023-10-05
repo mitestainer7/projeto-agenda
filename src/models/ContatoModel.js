@@ -21,7 +21,7 @@ function Contato(body, idUser) {
   this.contato = null;
 }
 
-Contato.prototype.register =  async function() {
+Contato.prototype.cadastro =  async function() {
   this.valida()
 
   if(this.errors.length > 0) return;
@@ -58,7 +58,7 @@ Contato.prototype.cleanUp = function() {
 Contato.prototype.edit = async function(id) {
   if(typeof id !== 'string') return;
   this.valida();
-  if(this.errors.length > 0);
+  if(this.errors.length > 0) return;
   this.contato = await ContatoModel.findByIdAndUpdate(id, this.body, { new: true });
 }
 

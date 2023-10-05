@@ -69,8 +69,7 @@ class Signup {
 
     if(this.body.password.length < 6 || this.body.password.length > 20) this.errors.push('A senha precisa ter entre 6 e 20 caracteres!');
     
-
-    if(this.body.rpassword.length < 6 || this.rpassword.length > 20) this.errors.push(`Campo "Repetir Senha" precisa ter entre 6 e 20 caracteres`);
+    if(this.body.rpassword.length < 6 || this.body.rpassword.length > 20) this.errors.push(`Campo "Repetir Senha" precisa ter entre 6 e 20 caracteres`);
     
 
     if(this.body.password !== this.body.rpassword) this.errors.push('As senhas precisam ser iguais!');
