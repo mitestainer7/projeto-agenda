@@ -8,9 +8,10 @@ mongoose.connect(process.env.CONNECTIONSTRING, {
   useFindAndModify: false 
 })
   .then(() => {
-    app.emit('pronto');
+    app.emit('BD conectado');
   })
-  .catch(e => console.log(e));
+  .catch(e => new Error('A conexão com o BD falhou'));
+
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
 const flash = require('connect-flash');
@@ -27,7 +28,7 @@ app.use(express.json());
 app.use(express.static(path.resolve(__dirname, 'public')));
 
 const sessionOptions = session({
-  secret: 'akasdfj0út23453456+54qt23qv  qwf qwer qwer qewr asdasdasda a6()',
+  secret: '1L0%vo+4KAB6o_}h2d!&(;z&$0j.gOLa*$bI..MK',
   store: MongoStore.create({ mongoUrl: process.env.CONNECTIONSTRING }),
   resave: false,
   saveUninitialized: false,
@@ -49,7 +50,7 @@ app.use(checkCsrfError);
 app.use(csrfMiddleware);
 app.use(routes);
 
-app.on('pronto', () => {
+app.on('BD conectado', () => {
   app.listen(3000, () => {
     console.log('Acessar http://localhost:3000');
     console.log('Servidor executando na porta 3000');

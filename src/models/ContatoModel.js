@@ -4,23 +4,21 @@ const validator = require('validator')
 const ContatoSchema = new mongoose.Schema({
   nome: { type: String, required: true },
   sobrenome: { type: String, required: false, default: '' },
-  email: { type: String, required: false, default: '' },
   telefone: { type: String, required: false, default: '' },
+  email: { type: String, required: false, default: '' },
+  idUser: { type: String, required: false },
   criadoEm: { type: Date, default: Date.now }
-});
+},
+  { collection: 'contatos' }
+);
 
 const ContatoModel = mongoose.model('Contato', ContatoSchema);
 
-function Contato(body) {
+function Contato(body, idUser) {
   this.body = body;
+  this.user = idUser;
   this.errors = [];
   this.contato = null;
-}
-
-Contato.buscaPorId = async function(id) {
-  if(typeof id !== 'string') return;
-  const user = await ContatoModel.findById(id);
-  return user;
 }
 
 Contato.prototype.register =  async function() {
@@ -52,7 +50,8 @@ Contato.prototype.cleanUp = function() {
     nome: this.body.nome,
     sobrenome: this.body.sobrenome,
     email: this.body.email,
-    telefone: this.body.telefone
+    telefone: this.body.telefone,
+    idUser: this.user
   }
 }
 
@@ -66,12 +65,12 @@ Contato.prototype.edit = async function(id) {
 // Métodos estáticos
 Contato.buscaPorId = async function(id) {
   if(typeof id !== 'string') return;
-  const contatos = await ContatoModel.findById(id);
-  return contatos;
+  const contato = await ContatoModel.findById(id);
+  return contato;
 }
 
-Contato.buscaContatos = async function() {
-  const contatos = await ContatoModel.find()
+Contato.buscaContatos = async function(userEmail) {
+  const contatos = await ContatoModel.find({idUser: userEmail})
     .sort({ criadoEm: -1 })
   return contatos;
 }
