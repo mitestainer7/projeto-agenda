@@ -1,0 +1,28 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background: $branco;
+  color: $preto;
+  transition: 0.3s;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+  padding: 15px;
+  font-family: 'Raleway', sans-serif;
+}

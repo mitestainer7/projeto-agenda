@@ -1,0 +1,65 @@
+.container {
+  max-width: 1500px;
+  align-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.btn-default {
+  width: 100%;
+  height: 40px;
+  border-radius: 40px;
+  background: $preto;
+  color: $branco;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 600;
+  margin: 35px 0px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.btn-secundary {
+  width: 100%;
+  height: 40px;
+  border-radius: 40px;
+  background: transparent;
+  color: $preto;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 600;
+  margin: 35px 0px;
+  font-family: 'Raleway', sans-serif;
+  text-decoration: none;
+  text-align: center;
+}
+
+.title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 28px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.lead {
+  margin: 10px 0 30px 0;
+}
+
+.alert-danger {
+  @include message;
+  color: $vermelho;
+  background-color: lighten($color: $vermelho, $amount: 20);
+  border: 2px solid $vermelho
+}
+
+.alert-success {
+  @include message;
+  color: $verde;
+  background-color: lighten($color: $verde, $amount: 30);
+  border: 2px solid $verde;
+}

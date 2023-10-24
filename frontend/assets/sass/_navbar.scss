@@ -1,0 +1,47 @@
+.navbar {
+  background: $cor-secundaria;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &-brand {
+    color: $branco;
+    font-weight: 900;
+    font-size: 35px;
+    padding: 10px;
+    margin: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+  }
+  .nav-item {
+    list-style: none;
+    margin: 15px;
+  }
+  .nav-link {
+    color: $branco;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    padding: 15px;
+  }
+}
+
+.bi-sun,
+.bi-moon,
+.bi-list {
+  color: $branco;
+  font-size: 20px;
+  cursor: pointer;
+  background: transparent;
+}
+
+.bi-moon {
+  display: none;
+}
+
+.sun-e-moon {
+  display: flex;
+  justify-content: center;
+}

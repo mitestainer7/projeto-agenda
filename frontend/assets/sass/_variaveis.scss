@@ -1,0 +1,22 @@
+$cor-primaria: #39b1ff;
+$cor-secundaria: #226591;
+$preto: #1b1b1b;
+$branco: #ffffff;
+$cinza: #a1a1a1;
+$verde: #44B640;
+$vermelho: #BD2F2F;
+
+@mixin message {
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 500;
+  border-radius: 5px;
+  padding: 15px 25px;
+  margin: 0px 0 35px 0;
+}
+
+@mixin style-td {
+  border-bottom: 1px solid $cinza;
+  width: 100%;
+}

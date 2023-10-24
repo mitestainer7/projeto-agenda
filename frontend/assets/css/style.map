@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "style.css",
+	"sources": [
+		"../sass/style.scss"
+	],
+	"sourcesContent": [
+		"$cor-primaria: #39b1ff;\r\n$cor-secundaria: #226591;\r\n$preto: #1b1b1b;\r\n$branco: #ffffff;\r\n$cinza: #a1a1a1;\r\n\r\nbody {\r\n  margin: 0;\r\n  padding: 0;\r\n  background: $preto;\r\n  color: $branco;\r\n}\r\n\r\n.container {\r\n  max-width: 1000px;\r\n  align-content: center;\r\n  align-items: center;\r\n  margin: 0 auto;\r\n}\r\n\r\n.navbar {\r\n  background: $cor-primaria;\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n  .navbar-brand {\r\n    color: $branco;\r\n    font-weight: 900;\r\n    font-size: 35px;\r\n    padding: 10px;\r\n    margin: 15px;\r\n    text-decoration: none;\r\n    text-transform: uppercase;\r\n    font-family: 'Raleway', sans-serif;\r\n  }\r\n  .nav-item {\r\n    list-style: none;\r\n    margin: 15px;\r\n  }\r\n  .nav-link {\r\n    color: $branco;\r\n    text-decoration: none;\r\n    text-transform: uppercase;\r\n    font-size: 20px;\r\n    font-family: 'Raleway', sans-serif;\r\n    font-weight: 500;\r\n    padding: 15px;\r\n  }\r\n}\r\n\r\n.text-center {\r\n  text-align: center;\r\n}\r\n\r\n.title {\r\n  font-size: 32px;\r\n}\r\n\r\ninput, label, form {\r\n  color: white;\r\n  background: blue;\r\n  font-family: 'Epilogue', sans-serif;\r\n}"
+	],
+	"names": [],
+	"mappings": ";AAMA,AAAA,IAAI,CAAC;EACH,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAPJ,OAAO;EAQb,KAAK,EAPE,OAAO;CAQf;;;AAED,AAAA,UAAU,CAAC;EACT,SAAS,EAAE,MAAM;EACjB,aAAa,EAAE,MAAM;EACrB,WAAW,EAAE,MAAM;EACnB,MAAM,EAAE,MAAM;CACf;;;AAED,AAAA,OAAO,CAAC;EACN,UAAU,EArBG,OAAO;EAsBpB,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;EAC9B,WAAW,EAAE,MAAM;CAwBpB;;;AA5BD,AAKE,OALK,CAKL,aAAa,CAAC;EACZ,KAAK,EAvBA,OAAO;EAwBZ,WAAW,EAAE,GAAG;EAChB,SAAS,EAAE,IAAI;EACf,OAAO,EAAE,IAAI;EACb,MAAM,EAAE,IAAI;EACZ,eAAe,EAAE,IAAI;EACrB,cAAc,EAAE,SAAS;EACzB,WAAW,EAAE,qBAAqB;CACnC;;;AAdH,AAeE,OAfK,CAeL,SAAS,CAAC;EACR,UAAU,EAAE,IAAI;EAChB,MAAM,EAAE,IAAI;CACb;;;AAlBH,AAmBE,OAnBK,CAmBL,SAAS,CAAC;EACR,KAAK,EArCA,OAAO;EAsCZ,eAAe,EAAE,IAAI;EACrB,cAAc,EAAE,SAAS;EACzB,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,qBAAqB;EAClC,WAAW,EAAE,GAAG;EAChB,OAAO,EAAE,IAAI;CACd;;;AAGH,AAAA,YAAY,CAAC;EACX,UAAU,EAAE,MAAM;CACnB;;;AAED,AAAA,MAAM,CAAC;EACL,SAAS,EAAE,IAAI;CAChB;;;AAED,AAAA,KAAK,EAAE,KAAK,EAAE,IAAI,CAAC;EACjB,KAAK,EAAE,KAAK;EACZ,UAAU,EAAE,IAAI;EAChB,WAAW,EAAE,sBAAsB;CACpC"
+}

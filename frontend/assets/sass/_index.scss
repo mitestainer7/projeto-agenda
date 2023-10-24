@@ -1,0 +1,67 @@
+table {
+  border-spacing: 0px;
+}
+
+.tr-dados {
+  font-family: 'Epilogue', sans-serif;
+  font-weight: 300;
+  height: 50px;
+  td {
+    @include style-td;
+    padding: 10px 0;
+  }
+  .td-nome {
+    padding-left: 15px;
+    text-align: center;
+  }
+  .td-sobrenome {
+    padding: 0 15px 0 5px;
+  }
+  .td-telefone {
+    padding: 0 15px;
+  }
+  .td-email {
+    padding: 0 15px;
+  }
+  .td-editar {
+    padding: 0 15px;
+    a {
+      text-decoration: none;
+      border-radius: 4px;
+      padding: 8px;
+      color: $verde;
+    }
+  }
+  .td-excluir {
+    padding: 0 15px;
+    a {
+      text-decoration: none;
+      border-radius: 4px;
+      padding: 8px;
+      color: $vermelho;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .tr-dados {
+    .td-nome {
+      padding: 10px 0px 10px 5px;
+    }
+    .td-email {
+      display: none;
+    }
+    .td-sobrenome {
+      padding: 0 5px 0 5px;
+    }
+    .td-telefone {
+      padding: 0 5px;
+    }
+    .td-editar {
+      padding: 0 5px;
+    }
+    .td-excluir {
+      padding: 0 5px;
+    }
+  }
+}
