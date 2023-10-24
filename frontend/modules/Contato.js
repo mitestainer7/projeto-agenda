@@ -25,35 +25,36 @@ export default class Contato {
         const emailInput = el.querySelector('input[class="email"]');
         let error = false;
         if (!nomeInput.value) {
+            let form = document.querySelector('.contato')
             let p = document.createElement('p');
             let errorMsg = document.createTextNode('Nome precisa ser preenchido')
             p.appendChild(errorMsg);
             p.classList.add('erro');
             p.classList.add('alert-danger');
-            nomeInput.after(p);
+            form.before(p);
             error = true;
         }
         if(!emailInput.value && !telefoneInput.value){
+            let form = document.querySelector('.contato')
             let p = document.createElement('p');
             let errorMsg = document.createTextNode('Email ou telefone deve ser preenchido')
             p.appendChild(errorMsg);
             p.classList.add('erro');
             p.classList.add('alert-danger');
-            const genErr = el.querySelector('span[class="genErr"]');
-            genErr.after(p);
+            form.before(p);
             error = true;
             return;
         }
         if (!telefoneInput.value && !validator.isEmail(emailInput.value)) {
+            let form = document.querySelector('.contato')
             let p = document.createElement('p');
             let errorMsg = document.createTextNode('Email inválido')
             p.appendChild(errorMsg);
             p.classList.add('erro');
             p.classList.add('alert-danger');
-            emailInput.after(p);
+            form.before(p);
             error = true;
         }
-
 
         if (!error) el.submit();
     }
