@@ -1,21 +1,21 @@
 <%- include('includes/head') %>
 
-      <h1 class="text-center">Agenda</h1>
+      <h1 class="text-center title">Agenda</h1>
       <p class="text-center lead">Seus contatos estão abaixo</p>
 
       <%- include('includes/messages') %>
 
       <% if(contatos.length > 0) { %>
-      <div class="responsive-table">
-        <table class="table my-3">
+      <div class="container">
+        <table class="table">
           <% contatos.forEach(contato => { %>
-            <tr>
-              <td> <%= contato.nome %> </td>
-              <td> <%= contato.sobrenome %> </td>
-              <td> <%= contato.telefone %> </td>
-              <td> <%= contato.email %> </td>
-              <td> <a href="/contato/index/<%= contato._id %>">Editar</a> </td>
-              <td> <a class="text-danger" href="/contato/delete/<%= contato._id %>">Excluir</a> </td>
+            <tr class="tr-dados container">
+              <td class="td-nome"> <%= contato.nome %> </td>
+              <td class="td-sobrenome"> <%= contato.sobrenome %> </td>
+              <td class="td-telefone"> <%= contato.telefone %> </td>
+              <td class="td-email"> <%= contato.email %> </td>
+              <td class="td-editar"> <a href="/contato/index/<%= contato._id %>"><i class="bi bi-pencil"></i></a> </td>
+              <td class="td-excluir"> <a class="text-danger" href="/contato/delete/<%= contato._id %>"><i class="bi bi-trash"></i></a> </td>
             </tr>
           <% }) %>
         </table>
@@ -25,9 +25,6 @@
       <% } %>
 
     </div>
-    
-    <div class="col-lg-2"></div>
   </div>
-</div>
 
 <%- include('includes/footer') %>

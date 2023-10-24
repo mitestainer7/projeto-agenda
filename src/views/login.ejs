@@ -1,29 +1,80 @@
 <%- include('includes/head'); %>
-<h1 class="text-center">Cadastrar ou Logar</h1>
+<h1 class="text-center title">Cadastrar ou Logar</h1>
 <p class="text-center lead my-2">Crie sua conta ou faça login abaixo</p>
 <%- include('includes/messages'); %> 
-<div class="row">
-    <div class="col-lg my-4">
-        <h3>Cadastre-se</h3>
-        <form action="/login/signup" method="post" class="form-control signup">
-            <input type="hidden" name="_csrf" value="<%= csrfToken%>">
-            <label for="email">E-mail</label><input type="email" name="email" class="email">
-            <label for="nome">Nome</label><input type="text" name="nome" class="nome">
-            <label for="sobrenome">Sobrenome</label><input type="text" name="sobrenome" class="sobrenome">
-            <label for="telefone">Telefone</label><input type="tel" name="telefone" class="telefone">
-            <label for="password">Senha</label><input type="password" name="password" class="password">
-            <label for="rpassword">Repetir Senha</label><input type="password" name="rpassword" class="rpassword">
-            <button class="btn-default">Cadastrar</button>
-        </form>
-    </div>
-    <div class="col-lg my-4">
-        <h3>Login</h3>
-        <form action="/login/signin" method="post" class="form-control signin">
-            <input type="hidden" name="_csrf" value="<%= csrfToken%>">
-            <label for="email">E-mail</label><input type="email" name="email" class="email">
-            <label for="password">Senha</label><input type="password" name="password" class="password">
-            <button class="btn-default">Login</button>
-        </form>
-    </div>
-</div>
+
+<main>
+    <section>
+        <div class="form-box">
+            <div class="form-value">
+                <form action="/login/signup" method="post" class="form-control signup">
+                    <h3>Cadastre-se</h3>
+                    <input type="hidden" name="_csrf" value="<%= csrfToken%>">
+                    
+                    <div class="inputbox">
+                        <i class="bi bi-envelope"></i>
+                        <input type="email" name="email" class="email" id="email" required>
+                        <label for="email">E-mail</label>
+                    </div>
+                    
+                    <div class="inputbox">
+                        <i class="bi bi-person"></i>
+                        <input type="text" name="nome" class="nome" id="nome" required>
+                        <label for="nome">Nome</label>
+                    </div>
+                    
+                    <div class="inputbox">
+                        <i class="bi bi-person"></i>
+                        <input type="text" name="sobrenome" class="sobrenome" id="sobrenome" required>
+                        <label for="sobrenome">Sobrenome</label>
+                    </div>
+        
+                    <div class="inputbox">
+                        <i class="bi bi-telephone"></i>
+                        <input type="tel" name="telefone" class="telefone" id="telefone" required>
+                        <label for="telefone">Telefone</label>
+                    </div>
+        
+                    <div class="inputbox">
+                        <i class="bi bi-key"></i>
+                        <input type="password" name="password" class="password" id="password" required>
+                        <label for="password">Senha</label>
+                    </div>
+        
+                    <div class="inputbox">
+                        <i class="bi bi-key"></i>
+                        <input type="password" name="rpassword" class="rpassword" id="rpassword" required>
+                        <label for="rpassword">Repetir Senha</label>
+                    </div>
+        
+                    <button class="btn-default">Cadastrar</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <div class="form-box">
+            <div class="form-value">
+                <form action="/login/signin" method="post" class="form-control signin">
+                    <h3>Login</h3>
+                    <input type="hidden" name="_csrf" value="<%= csrfToken%>">
+                    <div class="inputbox">
+                        <i class="bi bi-envelope"></i>
+                        <input type="email" name="email" class="email" id="email" required>
+                        <label for="email">E-mail</label>
+                    </div>
+        
+                    <div class="inputbox">
+                        <i class="bi bi-key"></i>
+                        <input type="password" name="password" class="password" id="password" required>
+                        <label for="password">Senha</label>
+                    </div>
+                    <button class="btn-default">Login</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+    
 <%- include('includes/footer'); %>
