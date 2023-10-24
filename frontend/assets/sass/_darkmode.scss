@@ -1,0 +1,38 @@
+.dark {
+  background-color: $preto;
+  color: $branco;
+  .navbar {
+    background-color: $cor-primaria;
+  }
+  .bi-sun {
+    display: none;
+  }
+  .bi-moon {
+    display: block;
+  }
+  .form-box {
+    border: 2px solid $branco;
+  }
+  h3 {
+    color: $branco;
+  }
+  .inputbox{
+    border-bottom: 2px solid $branco;
+  }
+  .inputbox i{
+    color: $branco;
+  }
+  .inputbox label{
+    color: $branco;
+  }
+  .inputbox input {
+    color: $branco;
+  }
+  .btn-secundary {
+    color: $branco;
+  }
+  .btn-default{
+    background: $branco;
+    color: $preto;
+  }
+}
