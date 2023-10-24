@@ -1,4 +1,4 @@
-import './assets/css/style.css';
+import './assets/css/style.css'
 
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
@@ -15,3 +15,12 @@ signup.init();
 import Contato from './modules/Contato'
 const contato = new Contato('.contato')
 contato.init();
+
+import changeTheme from './modules/DarkTheme';
+changeTheme();
+
+import mascaraInput from './modules/Mascara';
+mascaraInput();
+
+import initMenuMobile from './modules/MenuMobile';
+initMenuMobile();
